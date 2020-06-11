@@ -1,38 +1,127 @@
+@import url('https://fonts.google.com/specimen/Barlow+Semi+Condensed');
+
+#root {
+  background-color: #282c34;
+  padding-top: 10vh;
+  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  min-height: 100vh;
+  
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-bar {
+  text-align: center;
+  width: 100vh;
+  border: solid 6px grey;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.result {
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px 50px;
+}
+
+input[type="image"] {
+  margin: 40px;
+  width: 20vh;
+  height: 20vh;
+  border: solid 20px transparent;
+  border-radius: 50%;
+  padding: 40px;
+  -webkit-box-shadow: inset 0px 16px 8px -4px rgba(0,0,0,0.43);
+-moz-box-shadow: inset 0px 16px 8px -4px rgba(0,0,0,0.43);
+box-shadow: inset 0px 16px 8px -4px rgba(0,0,0,0.43);
+}
+
+.winner {
+  text-align: center;
+  width: 100vh;
+  border: solid 6px grey;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+}
+
+.house-winner input[type="image"] {
+  animation: fadeIn 6s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+input.rock{
+  background: 
+    linear-gradient(#ccc,#ccc) padding-box, 
+    linear-gradient(to right, hsl(39, 89%, 49%), hsl(40, 84%, 53%)) border-box;
+}
+
+input.paper{
+  background: 
+    linear-gradient(#ccc,#ccc) padding-box, 
+    linear-gradient(to right, rgb(72, 101, 244), hsl(230, 89%, 65%)) border-box;
+}
+
+input.scissors{
+  background: 
+    linear-gradient(#ccc,#ccc) padding-box, 
+    linear-gradient(to right, hsl(349, 71%, 52%), hsl(349, 70%, 56%)) border-box;
+}
+
+.choice {
+    text-align: center;
+    width: auto;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+  
+}
+
+.final-result {
+  font-size: 4em;
+  font-weight: 900;
+  color: white;
+  animation: fadeIn 6s;
+}
+
+.winner h3 {
+  font-size: 2.5em;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.result p {
+  color: #182144;
+  font-weight: 600;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result h3 {
+  color: grey;
+  font-weight: 600;
+  font-size: 2em;
+}
+
+.score-counter h3 {
+  margin: 0; 
 }
